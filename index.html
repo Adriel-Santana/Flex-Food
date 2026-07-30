@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fundo">
+
+    </div>
+
+    <div class="principal">
+        
+        <div class="telaEsquerda">
+
+            <div class="container">
+
+                <section class="secao1">
+                    <div class="logotipo">
+                        <h1>FLEX FOOD</h1>
+                        <p class="creditos">Adriel Santana, Gustavo Pereira de Campos, Luca de Carvalho Lopes, Malcon Messias Sene. 2026</p>
+                    </div>
+                    
+                    <div class="indicadorNivel">
+                        <button class="nivelAnterior"><img src="img/setaEsquerda1.png" onclick="nivelAnterior()"></button>
+                        <p>Nível <span id="indicadorNivelAtual">x</span> / 20</p>
+                        <button class="nivelPosterior"><img src="img/setaDireita1.png" onclick="nivelPosterior()"></button>
+                    </div>
+
+                    <div class="textoNivel" id="textoNivel">
+                        <p>Bem vindo ao Flex Food! Esse é um jogo em que você ajuda essas
+                        pessoas famintas a pegarem sua comida. Leve esses amiguinhos
+                        até sua refeição usando código CSS, como por exemplo o <span class="nomeComando">justify-content</span>, que
+                        organiza os elementos horizontalmente e que aceita as seguintes entradas:</p>
+                        <ul>
+                            <li><span class="nomeComando">flex-start</span> alinha os itens para o lado esquerdo do container.</li>
+                            <li><span class="nomeComando">flex-end</span> alinha os itens para o lado direito do container.</li>
+                            <li><span class="nomeComando">center</span> centraliza os itens dentro do container.</li>
+                            <li><span class="nomeComando">space-between</span> posiciona os itens com espaço equivalente entre eles.</li>
+                            <li><span class="nomeComando">space-around</span> posiciona os itens com espaço equivalente ao redor deles.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="secao2">
+
+                    <div class="guiaPersonagens">
+
+                        <div class="itemGuiaPersonagens">
+                            <img src="img/personagem1.png" alt="" class="imagemItemGuiaPersonagens">
+                            <img src="img/setaDireita2.png" alt="" class="imagemItemGuiaPersonagens" id="setaGuiaPersonagens">
+                            <img src="img/comida1.png" alt="" class="imagemItemGuiaPersonagens">
+                        </div>
+
+                        <div class="itemGuiaPersonagens">
+                            <img src="img/personagem2.png" alt="" class="imagemItemGuiaPersonagens">
+                            <img src="img/setaDireita2.png" alt="" class="imagemItemGuiaPersonagens" id="setaGuiaPersonagens">
+                            <img src="img/comida2.png" alt="" class="imagemItemGuiaPersonagens">
+                        </div>
+
+                        <div class="itemGuiaPersonagens">
+                            <img src="img/personagem3.png" alt="" class="imagemItemGuiaPersonagens">
+                            <img src="img/setaDireita2.png" alt="" class="imagemItemGuiaPersonagens" id="setaGuiaPersonagens">
+                            <img src="img/comida3.png" alt="" class="imagemItemGuiaPersonagens">
+                        </div>
+
+                    </div>
+
+                    <div class="areaCodigo">
+                        <div class="container">
+                            <div class="numeracaoCodigo">
+                                <div class="linhaCodigo"><p>1</p></div>
+                                <div class="linhaCodigo"><p>2</p></div>
+                                <div class="linhaCodigo"><p>3</p></div>
+                                <div class="linhaCodigo"><p>4</p></div>
+                                <div class="linhaCodigo"><p>5</p></div>
+                                <div class="linhaCodigo"><p>6</p></div>
+                                <div class="linhaCodigo"><p>7</p></div>
+                                <div class="linhaCodigo"><p>8</p></div>
+                            </div>
+
+                            <div class="codigoAreaCodigo">
+                                <div class="linhaCodigo"><p>#kitchen{</p></div>
+                                <div class="linhaCodigo"><p>display: flex;</p></div>
+                                <div class="linhaCodigoInput"><textarea spellcheck="none" name="programar" id="programar" placeholder="Digite seu código aqui" rows="3"></textarea></div>
+                                <div class="linhaCodigo"><p>}</p></div>
+
+                                <div class="areaReiniciar">
+                                    <button onclick="confirmarReiniciar()" id="botaoReiniciar" class="botaoReiniciar"><p>Reiniciar</p></button>
+                                    <p style="display:none" id="textoReiniciar">Deseja mesmo reiniciar?</p>
+                                    <button style="display:none" onclick="reiniciar()" id="botaoReiniciarConfirmar" class="botaoReiniciar"><p>Sim</p></button>
+                                    <button style="display:none" onclick="reloadAreaReiniciar()" id="botaoReiniciarCancelar" class="botaoReiniciar"><p>Não</p></button>
+                                </div>
+
+                            </div>
+
+                            <div class="botaoProximo">
+                                <button id="botaoProximo" onclick="nivelPosterior()"><p>Próximo</p></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="telaDireita" >
+            <div class="areaPersonagem" id="areaPersonagem">
+                <img src="img/personagem1.png" alt="" class="personagem" id="personagem1">
+                <img src="img/personagem2.png" alt="" class="personagem" id="personagem2">
+                <img src="img/personagem3.png" alt="" class="personagem" id="personagem3">
+            </div>
+            
+            <div class="areaComida" id="areaComida">
+                <img src="img/comida1.png" alt="" class="comida" id="comida1">
+                <img src="img/comida2.png" alt="" class="comida" id="comida2">
+                <img src="img/comida3.png" alt="" class="comida" id="comida3">
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+
+<script src="flexfood.js"></script>
+
+</html>
